@@ -27,7 +27,7 @@ export default function App() {
     }
     setLoading(true)
     try {
-      await axios.post('https://vansinfo-production.up.railway.app/api/contact', form)
+      await axios.post(`https://vansinfo-production.up.railway.app/api/contact`, form)
       setStatus({ type: 'success', msg: `Thanks ${form.name.split(' ')[0]}! Check your inbox — we've sent a confirmation email.` })
       setForm({ name: '', email: '', reason: '', message: '' })
     } catch (err) {
